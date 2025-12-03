@@ -12,13 +12,14 @@ export default function App() {
       }}
     >
       {/* Gradient overlay with circular mask */}
+      {/* component basically ! */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(to right,oklch(77.7% 0.152 181.912),oklch(91% 0.096 180.426),oklch(95.3% 0.051 180.801)   )",
+            "linear-gradient(to right,oklch(70.4% 0.14 182.503),oklch(77.7% 0.152 181.912),oklch(95.3% 0.051 180.801)   )",
           WebkitMaskImage:
-            "radial-gradient(circle 500px at 80% 50%, transparent 40%, black 41%)",
+            "radial-gradient(ellipse 500px at 80% 50%, transparent 40%, black 41%)",
           maskImage:
             "radial-gradient(circle 500px at 80% 50%, transparent 40%, black 41%)",
         }}
