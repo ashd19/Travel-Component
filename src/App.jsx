@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { Instagram, Search, Facebook, Twitter, Twitch } from "lucide-react";
 
 export default function App() {
   return (
@@ -39,14 +39,17 @@ export default function App() {
           </button>
         </div>
       </div>
-      <div id="hero" className="flex flex-col  ml-5 items-start justify-start gap-5">
+      <div
+        id="hero"
+        className="flex flex-col  ml-15 items-start justify-start gap-5"
+      >
         <div className="text-[6vw] leading-none text-white font-bold">
           <h1>
             TRAVEL <br />
             THE WORLD
           </h1>
         </div>
-        <div className=" text-6xl leading-18 text-white font-light tracking-tighter italic">
+        <div className=" text-5xl leading-13 text-white font-light tracking-tighter italic">
           <h1>
             "Discover new destinations,
             <br />
@@ -55,15 +58,31 @@ export default function App() {
         </div>
         <div>
           <p className="text-white leading-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, quod <br />
-            atque veniam recusandae autem maiores facilis natus sequi optio sed <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, quod{" "}
+            <br />
+            atque veniam recusandae autem maiores facilis natus sequi optio sed{" "}
+            <br />
             molestias ut quo sunt reiciendis praesentium excepturi culpa! <br />
             Tempora, voluptas!
           </p>
         </div>
         <button className="bg-white text-teal-800 rounded-3xl w-[130px]  uppercase px-2 font-bold py-2">
-BOOK NOW 
+          BOOK NOW
         </button>
+        <div id="icons" className="flex gap-4">
+          <div className="bg-white p-1 rounded-xl">
+            <Instagram />
+          </div>
+          <div className="bg-white p-1 rounded-xl">
+            <Facebook />
+          </div>
+          <div className="bg-white p-1 rounded-xl">
+            <Twitter />
+          </div>
+          <div className="bg-white p-1 rounded-xl">
+            <Twitch />
+          </div>
+        </div>
       </div>
     </div>
   );
