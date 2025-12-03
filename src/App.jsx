@@ -11,7 +11,7 @@ export default function App() {
     >
       <div
         id="navbar"
-        className="px-22 py-10  uppercase flex justify-between items-center"
+        className="px-25 py-10  uppercase flex justify-between items-center"
       >
         {" "}
         {["Home", "Services", "ABOUT", "Contact", "faq"].map((item) => (
@@ -41,7 +41,7 @@ export default function App() {
       </div>
       <div
         id="hero"
-        className="flex flex-col  ml-15 items-start justify-start gap-5"
+        className="flex flex-col  px-25 items-start justify-start gap-5"
       >
         <div className="text-6xl leading-none text-white font-bold">
           <h1>
@@ -66,7 +66,7 @@ export default function App() {
             Tempora, voluptas!
           </p>
         </div>
-        <button className="bg-white text-teal-800 rounded-3xl w-[130px]  uppercase px-2 font-bold py-2">
+        <button className="bg-white text-teal-800 rounded-3xl w-[130px]  mt-5 mb-5 uppercase px-2 font-bold py-2">
           BOOK NOW
         </button>
         <div id="icons" className="flex gap-4">
