@@ -2,7 +2,13 @@ import { Search } from "lucide-react";
 
 export default function App() {
   return (
-    <div className="bg-teal-700 h-screen">
+    <div
+      className="bg-linear-to-r from-teal-600 h-screen"
+      style={{
+        backgroundImage:
+          "https://vastphotos.com/files/uploads/photos/12268/peaceful-tranquil-lake-photo-m.jpg?v=20250916092037",
+      }}
+    >
       <div
         id="navbar"
         className="px-5 py-10  uppercase flex justify-between items-center"
