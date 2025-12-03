@@ -22,7 +22,7 @@ export default function App() {
             id="search"
             className="rounded-3xl shadow-xl bg-neutral-100 h-full p-1  w-[300px] flex items-center justify-end"
           >
-            <h1>search</h1>{" "}
+            <input type="text" placeholder="SEARCH"  onFocus={'border border-white'}/>
             <div className="bg-green-700 rounded-full p-2 ml-2">
               <Search />
             </div>
@@ -36,7 +36,7 @@ export default function App() {
         </div>
       </div>
       <div id="hero" className="flex flex-col  ml-5 justify-start gap-5">
-        <div className="text-[6vw] leading-none text-white font-medium">
+        <div className="text-[6vw] leading-none text-white font-bold">
           <h1>
             TRAVEL <br />
             THE WORLD
