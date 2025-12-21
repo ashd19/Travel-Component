@@ -34,14 +34,15 @@ export default function App() {
 
       {/* Background Clipped Shapes revealing original BG */}
       {[
-        { pos: "bottom-0 left-0", rotate: "0deg" },
-        { pos: "top-0 right-10", rotate: "20deg" },
+        { pos: "bottom-0 left-0", translatePosition: "translate-x-140 -translate-y-120" },
+        { pos: "top-0 right-10", translatePosition: "translate-x-80 -translate-y-40" },
+        { pos: "top-0 right-10", translatePosition: "translate-x-65 translate-y-36" },
+        { pos: "top-0 right-10", translatePosition: "translate-x-135 translate-y-30" },
       ].map((shape, i) => (
         <div
           key={i}
-          className={`absolute ${shape.pos} w-[930px] h-[300px] z-5`}
+          className={`absolute ${shape.pos} w-[930px] h-[400px] -rotate-30 ${shape.translatePosition}     z-5`}
           style={{
-            transform: `rotate(${shape.rotate})`,
             clipPath: "url(#my-shared-rect)",
             WebkitClipPath: "url(#my-shared-rect)",
             backgroundImage: bgImage,
