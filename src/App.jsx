@@ -21,16 +21,29 @@ export default function App() {
         }}
       ></div>
 
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <clipPath id="my-shared-rect" clipPathUnits="objectBoundingBox">
+            <path
+              transform="scale(0.00144927536, 0.00374531835)"
+              d="M1.86617 231.405C-5.41886 205.999 9.27103 179.497 34.6769 172.212L628.745 1.86618C654.151 -5.41884 680.652 9.27101 687.937 34.6769C695.222 60.0828 680.532 86.5841 655.126 93.8691L61.0584 264.215C35.6525 271.5 9.1512 256.81 1.86617 231.405Z"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+
       {/* Background Clipped Shapes revealing original BG */}
-      {["bottom-0 left-0", "top-0 right-10"].map((pos, i) => (
+      {[
+        { pos: "bottom-0 left-0", rotate: "0deg" },
+        { pos: "top-0 right-10", rotate: "20deg" },
+      ].map((shape, i) => (
         <div
           key={i}
-          className={`absolute ${pos} w-[690px] h-[267px] z-5`}
+          className={`absolute ${shape.pos} w-[930px] h-[300px] z-5`}
           style={{
-            clipPath:
-              "path('M1.86617 231.405C-5.41886 205.999 9.27103 179.497 34.6769 172.212L628.745 1.86618C654.151 -5.41884 680.652 9.27101 687.937 34.6769C695.222 60.0828 680.532 86.5841 655.126 93.8691L61.0584 264.215C35.6525 271.5 9.1512 256.81 1.86617 231.405Z')",
-            WebkitClipPath:
-              "path('M1.86617 231.405C-5.41886 205.999 9.27103 179.497 34.6769 172.212L628.745 1.86618C654.151 -5.41884 680.652 9.27101 687.937 34.6769C695.222 60.0828 680.532 86.5841 655.126 93.8691L61.0584 264.215C35.6525 271.5 9.1512 256.81 1.86617 231.405Z')",
+            transform: `rotate(${shape.rotate})`,
+            clipPath: "url(#my-shared-rect)",
+            WebkitClipPath: "url(#my-shared-rect)",
             backgroundImage: bgImage,
             backgroundSize: "cover",
             backgroundPosition: "center",
